@@ -83,7 +83,7 @@ void setup(void) {
   mp.step(0);  //inicia o motor de passos com zero passos
   bit12_Voltage = (InputRange_code)/(AR_12BIT_MAX - 1); //fator de convercao bit~voltagem
   bit16_Voltage = (InputRange_code)/(ADC_16BIT_MAX - 1); //fator de convercao bit~voltagem
-  setpointM = 150/3.3f;   //setpointM inicia sendo o menor valor admissível (referente ao motor)
+  setpointM = 340/3.3f;   //setpointM inicia sendo o menor valor admissível (referente ao motor)
   setpointC = 10*255/3300;   //setpoint inicia sendo o menor valor admissível (referente a camara)
   pin = false;
   def = 0; 
