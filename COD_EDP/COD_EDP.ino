@@ -79,7 +79,7 @@ void setup(void) {
   pinMode(A2, INPUT); //pino Sensor de pressão (Aplicador)
   pinMode(A3, INPUT); //pino Sensor de pressão (Camara)
   pinMode(pinAplicador, OUTPUT);  //configura o pinAplicador
-  mp.setSpeed(40); //velocidade de rotacao do motor de passos em rpm
+  mp.setSpeed(30); //velocidade de rotacao do motor de passos em rpm
   mp.step(0);  //inicia o motor de passos com zero passos
   bit12_Voltage = (InputRange_code)/(AR_12BIT_MAX - 1); //fator de convercao bit~voltagem
   bit16_Voltage = (InputRange_code)/(ADC_16BIT_MAX - 1); //fator de convercao bit~voltagem
@@ -203,6 +203,10 @@ void loop(void) {
               condicao = 1;
             }
             if(setpoint1 == 1){
+              digitalWrite(8, LOW);
+              digitalWrite(9, LOW);
+              digitalWrite(10, LOW);
+              digitalWrite(11, LOW);
               condicao = 2;
               goto sensorLVDTDNIT134;
             }
